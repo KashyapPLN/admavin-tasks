@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const Square = ({ id, isSplit, handleOuterClick, handleInnerClick }) => {
+function Square({ id, isSplit, handleOuterClick, handleInnerClick }){
   return (
     <div
       className={`square ${isSplit ? "split" : ""}`}
@@ -19,7 +19,7 @@ const Square = ({ id, isSplit, handleOuterClick, handleInnerClick }) => {
   );
 };
 
-const SquareGrid = () => {
+function SquareGrid (){
   const [grid, setGrid] = useState({});
 
   const handleOuterClick = (id) => {
