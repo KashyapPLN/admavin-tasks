@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import ElementTransfer from './ElementTransfer/ElementTransfer';
+import InfiniteScroll from './Infinite-Scroll/InfiniteScroll';
+import SquareBox from './SquareBox';
 import './App.css';
+import BoxGame from './box-game/BoxGame';
+import NavBar from './NavBar';
+import ParentChildList from './parent-child/ParentChildList';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      {/* <ElementTransfer /> */}
+   {/* <InfiniteScroll /> */}
+
+   {/* <SquareBox /> */}
+   {/* <BoxGame/> */}
+
+   <Routes>
+   <Route path="/scroll" element={<InfiniteScroll/>} />
+   <Route path="/parentchild" element={<ParentChildList/>} />
+   <Route path="/game" element={<BoxGame/>} />
+   <Route path="/element" element={<ElementTransfer/>} />
+   <Route path="/box" element={<SquareBox/>} />
+   </Routes>
     </div>
   );
 }

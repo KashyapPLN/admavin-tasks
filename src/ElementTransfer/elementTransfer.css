@@ -1,0 +1,33 @@
+.bucket1{
+    height:600px;
+    width:400px;
+    background-color: azure;
+    
+}
+.bucketlist{
+    background-color: greenyellow;
+    width:100px;
+    margin: 30px;
+    padding: 20px;
+    
+}
+
+.elementTransfer{
+    display: flex;
+    justify-content: space-around;
+}
+.bucket2{
+    height:600px;
+    width:400px;
+    background-color: rgb(248, 239, 116);
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons > Button{
+    width:120px;
+    margin: 30px;
+}
