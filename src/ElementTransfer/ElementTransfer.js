@@ -44,9 +44,6 @@ var temp = b1Items.filter((item,
             if (b3Items[i] === b1Items[j]) {
                setB1Items(b1Items.slice(0, j).concat(b1Items.slice(j+1, arrlen)));
                var arr = [...b2Items,b3Items[i]];
-            //   var temp = arr.filter((item, 
-            //     index) => arr.indexOf(item) === index);
-            //     console.group("temp is"+temp); 
                setB2Items(arr);
                
             }
@@ -58,7 +55,10 @@ var temp = b1Items.filter((item,
 
  function b2Click(e){
     b3Items.push(e.target.innerText);
-    setB3Items([...b3Items]);
+    var temp = b3Items.filter((item, 
+        index) => b3Items.indexOf(item) === index);
+        setB3Items([...temp]);
+    // setB3Items([...b3Items]);
  }
  console.log("b3 is"+b3Items); 
   return (

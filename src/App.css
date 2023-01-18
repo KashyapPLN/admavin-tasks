@@ -2,6 +2,12 @@
 @import url("./Infinite-Scroll/infiniteScroll.css");
 @import url("./parent-child/parentchild.css");
 @import url("./box-game/boxgame.css");
+
+.text{
+  color: black;
+  margin-top: 100px;
+  text-align: center;
+}
 .square {
   width: 400px;
   height: 400px;

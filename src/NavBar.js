@@ -9,7 +9,8 @@ export default function NavBar() {
      
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto mx-5 px-5">            
+          <Nav className="me-auto mx-5 px-5">   
+            <Nav.Link href='/'>Home</Nav.Link>          
             <Nav.Link href='/scroll'>Infinite Scroll</Nav.Link>
             <Nav.Link href="/parentchild">Parent Child List</Nav.Link>
             <Nav.Link href='/game'>Box Game</Nav.Link>            
