@@ -8,6 +8,7 @@ export default function () {
     const [b2Items,setB2Items]= useState(b1);
     const [b3Items,setB3Items]= useState([]);
     const [b2Exist,setB2Exist]= useState(false);
+    const [removePress,setRemovePress]=useState(false);
 
 
 
@@ -36,7 +37,7 @@ var temp = b1Items.filter((item,
     }
     
  }
- function bucket2(e){
+ if(removePress===true){
  if(b3Items.length!==0){
     for (var i = 0; i<b3Items.length; i++) {
         var arrlen = b1Items.length;
@@ -50,6 +51,9 @@ var temp = b1Items.filter((item,
         }
     }
  }
+}
+ function bucket2(e){
+ setRemovePress(!removePress);
  }
 
 
