@@ -4,7 +4,6 @@ import { Button, Container } from 'react-bootstrap'
 export default function () {
     const b1= ['item1','item2','item3','item4','item5','item6']
     const [b1Items,setB1Items]= useState([]);
-     // const [assign,setAssign]=useState(0);
     const [b2Items,setB2Items]= useState(b1);
     const [b3Items,setB3Items]= useState([]);
     const [b2Exist,setB2Exist]= useState(false);
@@ -19,9 +18,7 @@ b1Items.push(e.target.innerText);
 var temp = b1Items.filter((item, 
     index) => b1Items.indexOf(item) === index);
     setB1Items([...temp]);
-// setB1Display(b1Items);
    }
-//    console.log('display',b1display);
 
     if(b2Exist===true){
     for (var i = 0; i<b1Items.length; i++) {
@@ -29,9 +26,7 @@ var temp = b1Items.filter((item,
         for (var j = 0; j<arrlen; j++) {
             if (b1Items[i] === b2Items[j]) {
                 var arr=b2Items.slice(0, j).concat(b2Items.slice(j+1, arrlen));
-                
-                        // console.group("temp is"+temp);
-               setB2Items(arr);
+                 setB2Items(arr);
             }
         }
     }
@@ -62,7 +57,6 @@ var temp = b1Items.filter((item,
     var temp = b3Items.filter((item, 
         index) => b3Items.indexOf(item) === index);
         setB3Items([...temp]);
-    // setB3Items([...b3Items]);
  }
  console.log("b3 is"+b3Items); 
   return (
