@@ -13,10 +13,10 @@ export default function TableTask() {
         <button onClick={(e)=>{setDisp1(true);setDisp2(false);}}style={{margin:'40px'}}>Screen1</button>
         <button onClick={(e)=>{setDisp2(true);setDisp1(false);}}>Screen2</button>
         </div>
-        <Container style={{border: 'solid',padding:'20px'}}>
+       {disp1||disp2===true ? <Container style={{border: 'solid',padding:'20px'}}>
         {disp1===true ? <Screen1/>: null}
         {disp2===true ? <SortingTableComponent/>: null}
-        </Container>
+        </Container>: null}
     </div>
   )
 }
