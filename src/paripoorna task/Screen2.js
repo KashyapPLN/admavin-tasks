@@ -23,6 +23,7 @@ function Table({ columns, data }) {
     // Render the UI for your table
     return (
         <div>
+            <h3 style={{margin:'40px'}}>Click near the column title for Sorting and Refresh</h3>
             <table className="table" {...getTableProps()}>
                 <thead>
                     {headerGroups.map(headerGroup => (
