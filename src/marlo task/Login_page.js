@@ -13,7 +13,8 @@ const [pwd,setPwd]=useState('');
 const[obj,setObj]=useState({});
 const [fN1,setFN1]=useState('');
 const [pwd1,setPwd1]=useState('');
-const[obj1,setObj1]=useState({});
+const [obj1,setObj1]=useState({});
+const [message,setMessage]=useState('');
 function signUp(e){
     const temp={
         fN: fN,
@@ -27,7 +28,7 @@ function signUp(e){
         pwd:pwd
     }
 setObj(temp);
-fetch("https://marlotask.vercel.app//user/marlotask/signup",{
+fetch("https://marlotask.vercel.app/user/marlotask/signup",{
       method : 'POST',
       body :JSON.stringify(obj),
       headers:{ 'Content-Type': 'application/json',
@@ -42,14 +43,15 @@ function login(e){
         pwd:pwd1
     }
     setObj1(temp1);
-    fetch("https://marlotask.vercel.app//user/marlotask/login",{
+    fetch("https://marlotask.vercel.app/user/marlotask/login",{
       method : 'POST',
       body :JSON.stringify(obj1),
       headers:{ 'Content-Type': 'application/json',
                 'Accept' : 'application/json' }
-    }).then((data)=>console.log(data))
+    }).then((data)=>console.log(data.status))
     console.log('obj1',obj1)
 }
+
 
   return (
     <div style={{marginTop:'30px'}}>

@@ -9,6 +9,9 @@ import SquareGrid from './SquareBox';
 import Task from './task';
 import { useState } from 'react';
 import Login_page from './marlo task/Login_page';
+import TableTask from './paripoorna task/TableTask';
+import SortingTableComponent from './paripoorna task/Screen2';
+
 
 function App() {
   // const [a,setA] = useState(0);
@@ -26,7 +29,10 @@ function App() {
      <Route path="/box" element={<SquareGrid />} />
    </Routes> */}
 {/* <Task a={a} setA={setA}/> */}
-<Login_page/>
+{/* <Login_page/> */}
+<h1 style={{margin:'40px'}}>Select Screen</h1>
+<TableTask/>
+
     </div>
   );
 }
